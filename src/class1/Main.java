@@ -1,7 +1,6 @@
 package class1;
-
+import java.util.Arrays;
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -17,5 +16,17 @@ public class Main {
         String result = a > b ? ">" : a < b ? "<" : "==";
 
         System.out.println(result);*/
+
+        //11720
+        int n = in.nextInt();
+        in.nextLine();
+        String n2 = in.nextLine();
+        String[] split = n2.split("");
+
+        int sum = Arrays.stream(split).mapToInt(Integer::parseInt).sum();
+
+        System.out.println(sum);
+
     }
+
 }
